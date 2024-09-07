@@ -1,0 +1,143 @@
+.odds-calculator {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.odds-input, .comparison-display {
+  background-color: var(--surface-color);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.odds-input h2, .comparison-display h2 {
+  color: var(--on-surface-color);
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.players-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.player-section {
+  background-color: #252525;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.player-section h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.input-group {
+  margin-bottom: 0.5rem;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: #b0b0b0;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #2c2c2c;
+  color: var(--on-surface-color);
+}
+
+.odds-inputs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.odds-inputs .input-group {
+  flex: 1;
+}
+
+.comparison-table {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+th, td {
+  border: 1px solid var(--border-color);
+  padding: 0.5rem;
+  text-align: left;
+  font-size: 0.875rem;
+}
+
+th {
+  background-color: #2c2c2c;
+  font-weight: 700;
+}
+
+tr:nth-child(even) {
+  background-color: #252525;
+}
+
+@media (min-width: 768px) {
+  .odds-calculator {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .odds-input, .comparison-display {
+    flex: 1;
+    padding: 1.5rem;
+  }
+
+  .odds-input h2, .comparison-display h2 {
+    font-size: 1.5rem;
+  }
+
+  .player-section h3 {
+    font-size: 1.25rem;
+  }
+
+  .input-group label {
+    font-size: 1rem;
+  }
+
+  th, td {
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+}
+
+.percentage-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.percentage-input input {
+  padding-right: 30px;
+}
+
+.percentage-symbol {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--on-surface-color);
+  pointer-events: none;
+}
